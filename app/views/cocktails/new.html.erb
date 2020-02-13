@@ -1,0 +1,10 @@
+<div>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit 'Add a cocktail', class: "btn btn-primary"%>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Back', cocktails_path, class: 'btn btn-primary' %>
