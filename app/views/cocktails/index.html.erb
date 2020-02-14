@@ -1,9 +1,21 @@
-<h1>List of some delicious cocktails</h1>
 
-<div>
-  <h2><% @cocktails.each do |cocktail| %></h2>
-    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-  <% end %>
+
+<div class="banner" style="background-image: url(<%= image_path "cocktail_nuit.jpg" %>)">
+  <div class="container">
+    <h1 class="text-center">List of some delicious cocktails !</h1>
+  </div>
 </div>
 
-<%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+<div class="container">
+  <div class="my-2">
+
+    <h2 class="p-1"><% @cocktails.each do |cocktail| %></h2>
+      <p class="card-category" ><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+    <% end %>
+
+    <br>
+
+    <p><%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-ghost:hover'%></p>
+
+  </div>
+</div>

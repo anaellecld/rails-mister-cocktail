@@ -1,19 +1,18 @@
 <div class="container">
+  <div class="my-2">
+    <h1><%= @cocktail.name %></h1>
+      <ul>
+        <% @doses.each do |dose| %>
+         <li><%= dose.ingredient.name%></li>
+         <br>
+         <li><%= dose.description%></li>
+        <% end %>
+      </ul>
 
-  <h1>That is a <%= @cocktail.name %></h1>
+    <br>
 
-  <!-- <div>
-    <%= simple_form_for(@cocktail) do |f| %>
-      <%= %>
-      <%= %>
-    <% end %>
-  </div> -->
-
-  <br>
-
-  <%= link_to 'Add dose to cocktail', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-
-  <br>
-
-  <%= link_to 'Back', cocktails_path, class: 'btn btn-primary' %>
+    <p><%= link_to 'Add dose to cocktail', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %></p>
+    <br>
+    <p><%= link_to 'Back', cocktails_path, class: 'btn btn-ghost:hover' %></p>
+  </div>
 </div>

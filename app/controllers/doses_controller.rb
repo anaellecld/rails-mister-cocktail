@@ -8,7 +8,7 @@ class DosesController < ApplicationController
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)
-    @dose.cocktail_id = @cocktail.id
+    @dose.cocktail_id = @cocktail.id # conflit ingredient
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
