@@ -1,6 +1,32 @@
 
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="banner" style="background-image: url(<%= image_path "cocktail_nuit.jpg" %>)">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <p class="nav-link btn-ghost btn-ghost:hover"> <%= link_to 'Create a new cocktail', new_cocktail_path %>
+        </p>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="banner" style="background-image: url(<%= image_path "cocktail_ice.jpg" %>)">
   <div class="container">
     <h1 class="text-center">List of some delicious cocktails !</h1>
   </div>
@@ -18,4 +44,4 @@
     <p><%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-ghost:hover'%></p>
 
   </div>
-</div>
+
